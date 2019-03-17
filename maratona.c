@@ -27,25 +27,21 @@ int insere_reg_quantidade(int registros){
 		printf("|	INSERIR REGISTRO	|\n");
 		printf("\n1 - Código Corredor: ");
 		scanf("%d", &maratona_reg.cod);
-		fprintf(arquivo_maratona, "%d  ", maratona_reg.cod);
+		fprintf(arquivo_maratona, "%d; ", maratona_reg.cod);
 		int ch = getchar();
 		do {
 			printf("\n2 - Nome Corredor: ");
-			fgets(maratona_reg.nome, sizeof(maratona_reg.nome), stdin);
-			fputs(maratona_reg.nome, arquivo_maratona);
-			printf("\n2 - Nome Corredor: ");
-			fgets(maratona_reg.t_corrida, sizeof(maratona_reg.t_corrida), stdin);
-			fputs(maratona_reg.t_corrida, arquivo_maratona);
+			scanf("%s",maratona_reg.nome);
+			fprintf(arquivo_maratona, "%s; ", maratona_reg.nome);
+			printf("\n2 - Tempo de Corrida: ");
+			scanf("%s",&maratona_reg.t_corrida);
+			fprintf(arquivo_maratona, "%s; ", &maratona_reg.t_corrida);	
+			printf("\n2 - Data da Corrida: ");
+			scanf("%s",&maratona_reg.dt_corrida);
+			fprintf(arquivo_maratona, "%s;\n", &maratona_reg.dt_corrida);			
 		} while (ch != '\n' && ch != EOF);
 		
-		fclose(arquivo_maratona);	
-
-		
-			/*printf("\n4 - Data da Corrida: ");
-			fgets(maratona_reg.dt_corrida, sizeof(maratona_reg.dt_corrida), stdin);
-			fprintf(arquivo_maratona, "%s ", maratona_reg.dt_corrida);*/
-		
-		
+		fclose(arquivo_maratona);
 	}
 	
 	printf("<== VOLTAR - PRESSIONE 0");

@@ -1,7 +1,3 @@
-1  1  Luana
-1  Luana
-1  Luana
-1  1  Luana
-1  Luana
-1  Luana
-1  Luana
+1; Luana; 00:02; 12/03/2019;
+1; Chris; 00:01; 12/03/2019;
+2; Luana; 00:02; 12/03/2019;
